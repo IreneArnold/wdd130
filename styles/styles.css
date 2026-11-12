@@ -1,5 +1,15 @@
+:root {
+        --primary-color: darkblue;
+        --background-light: #eee;
+        --text-color: #333;
+        --border-color: rgb(0 0 0 / 0.2);
+}
+
+
+
+
 nav {
-    background-color: darkblue;
+    background-color: var(--primary-color);
     padding: 10px
 }
 
@@ -10,7 +20,7 @@ nav a {
 }
 
 h1 {
-    color: darkblue
+    color: var(--primary-color);
 }
 main {
     max-width: 840px;
@@ -32,10 +42,10 @@ p {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
+    border: 1px solid var(--border-color);
     padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    background-color: var(--background-light);
+    color: var(--text-color);
     text-align: center;
 }
 aside img {
