@@ -148,8 +148,124 @@ footer img {
 .socialmedia {
     display: flex;
     gap: 15px;
+}    
 .socialmedia img {
     width: 30px;
     height: auto;
 }
+main > h1 {
+    position: static;
+    background-color: transparent;
+    color: var(--primary-color);
+    opacity: 1;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+main > h2,
+main > p {
+    text-align: center;
+    margin: 0.25rem 0;
+    padding: 0;
+}
+
+/* Two-Column Map & Form Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin: 1.5rem 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 360px;
+    border: 0;
+}
+
+/* Form Styling (Labels on left, inputs on right) */
+form {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+}
+
+form fieldset {
+    grid-column: 1 / -1;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+form label[for="message"],
+form textarea,
+form label:has(input[type="checkbox"]),
+form button[type="submit"] {
+    grid-column: 1 / -1;
+}
+
+form button[type="submit"] {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Employee Profiles Section */
+.employees {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+}
+
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.employee-list figure {
+    margin: 0;
+}
+
+.employee-list img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.employee-list figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
 }
