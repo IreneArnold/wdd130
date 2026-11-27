@@ -168,8 +168,6 @@ main > p {
     margin: 0.25rem 0;
     padding: 0;
 }
-
-/* Two-Column Map & Form Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -180,7 +178,7 @@ main > p {
 
 .map iframe {
     width: 100%;
-    height: 390px;
+    height: 370px;
     border: 0;
 }
 form {
@@ -204,17 +202,26 @@ form fieldset {
     grid-column: 1 / -1;
     border: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    column-gap: 0.75rem;
+    row-gap: 0.35rem;
+    align-items: center;
 }
 
 form fieldset legend {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    float: left;
+    /* ensures reliable grid placement across browsers */
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    padding: 0;
 }
 
-form label[for="message"],
+form fieldset label {
+    grid-column: 2;
+}
 form textarea,
 form label:has(input[type="checkbox"]),
 form button[type="submit"] {
@@ -255,9 +262,9 @@ form button[type="submit"]:hover {
 }
 
 .employee-list img {
-    width: 100%;
+    width: 200%;
     max-width: 200px;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
     border-radius: 4px;
 }
